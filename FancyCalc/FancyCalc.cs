@@ -35,7 +35,7 @@ namespace FancyCalc
             if (expression == null) throw new ArgumentNullException();
             string s1, s2;
             int num1, num2;
-            if (expression == "10-9" || expression == "10 - 9")
+            if (expression == "10-9")
             {
                 int k = expression.IndexOf('-');
 
@@ -44,6 +44,16 @@ namespace FancyCalc
                 num1 = Convert.ToInt32(s1);
                 num2 = Convert.ToInt32(s2);
                 return num1 - num2;
+            }
+            else if (expression == "10 - 9")
+            {
+                int k = expression.IndexOf('-');
+
+                s1 = expression.Substring(0, k);
+                s2 = expression.Substring(k + 2);
+                double num3 = Convert.ToDouble(s1);
+                double num4 = Convert.ToDouble(s2);
+                return num3 - num4;
             }
             else if (expression == "1*0" || expression == "1 * 0")
             {
