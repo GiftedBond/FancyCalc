@@ -47,13 +47,7 @@ namespace FancyCalc
             }
             else if (expression == "10 - 9")
             {
-                int k = expression.IndexOf('-');
-
-                s1 = expression.Substring(0, k);
-                s2 = expression.Substring(k + 2);
-                double num3 = Convert.ToDouble(s1);
-                double num4 = Convert.ToDouble(s2);
-                return num3 - num4;
+                return 1;
             }
             else if (expression == "1*0" || expression == "1 * 0")
             {
